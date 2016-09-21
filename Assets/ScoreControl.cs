@@ -11,11 +11,10 @@ public class ScoreControl : MonoBehaviour {
     private GameObject scoreText;
     private GameObject totalScoreObject;
     void Start () {
-
         this.totalScoreObject = GameObject.Find("Ball");
+        this.scoreText = GameObject.Find("ScoreText");
         this.scoreText.GetComponent<Text>().text = "Score:" + this.totalScoreObject.GetComponent<BallController>().totalScore;
 
-        this.scoreText = GameObject.Find("ScoreText");
         if (tag == "SmallStarTag")
         {
             this.score = 10;
